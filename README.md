@@ -9,9 +9,12 @@
 | Storage   | Kafka     |
 | Data Collect   | Mock Data Generator  |
 
-## Dependencies
+## Dependencies - 依赖
 
+## Hardware - 硬件规模
+### Local - 单机
 
+### Azure [TODO]
 
 
 
