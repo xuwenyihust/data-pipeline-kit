@@ -1,7 +1,13 @@
 # Data Pipeline Kit - 数仓平台实践
 
-## Designs
-* [TODO] 实时数仓平台：Kafka + Flink 
+## Architecture - 架构
+| Layer      | Tools |
+| ----------- | ----------- |
+| Applications | Dashboard  |
+| OLAP Storage   | Druid     |
+| Computation   | Flink     |
+| Storage   | Kafka     |
+| Data Collect   | Mock Data Generator  |
 
 ## Dependencies
 
