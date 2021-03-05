@@ -11,10 +11,10 @@
 
 ## Dependencies - 依赖
 
-## Hardware - 硬件规模
+## Deployment - 部署
 ### Local - 单机
 
 ### Azure [TODO]
 
-
+## Load Test - 负载测试
 
