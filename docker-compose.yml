@@ -1,26 +1,35 @@
 version: "2.2"
 services:
-  jobmanager:
-    image: flink:1.12.0-scala_2.11
-    expose:
-      - "6123"
-    ports:
-      - "8081:8081"
-    command: jobmanager
-    environment:
-      - JOB_MANAGER_RPC_ADDRESS=jobmanager
-    container_name: job_manager
 
-  taskmanager:
-    image: flink:1.12.0-scala_2.11
-    expose:
-      - "6121"
-      - "6122"
-    depends_on:
-      - jobmanager
-    command: taskmanager
-    links:
-      - "jobmanager:jobmanager"
-    environment:
-      - JOB_MANAGER_RPC_ADDRESS=jobmanager
-    container_name: task_manager
+  # Kafka Cluster
+
+  # Flink Cluster
+#  flink-job-manager:
+#    image: flink:1.12.0-scala_2.11
+#    expose:
+#      - "6123"
+#    ports:
+#      - "8081:8081"
+#    command: jobmanager
+#    environment:
+#      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+#    container_name: flink_job_manager
+#
+#  flink-task-manager:
+#    image: flink:1.12.0-scala_2.11
+#    expose:
+#      - "6121"
+#      - "6122"
+#    depends_on:
+#      - jobmanager
+#    command: taskmanager
+#    links:
+#      - "jobmanager:jobmanager"
+#    environment:
+#      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+#    container_name: flink_task_manager
+
+  # Flink job
+  flink-job:
+    build: ./flink/
+    container_name: flink_job
