@@ -9,7 +9,10 @@
 | Storage   | Kafka     |
 | Data Collect   | Mock Data Generator  |
 
+## Quick Start
+
 ## Dependencies - 依赖
+* Java - 11
 
 ## Deployment - 部署
 ### Local - 单机
