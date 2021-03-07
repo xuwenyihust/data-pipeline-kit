@@ -13,7 +13,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
-group 'kit.pipeline.data.flink'
+group 'kit.pipeline.data.job'
 version '1.0-SNAPSHOT'
 sourceCompatibility = 11
 
@@ -36,7 +36,7 @@ dependencies {
 
 shadowJar {
     manifest {
-        attributes "Main-Class": "kit.pipeline.data.flink.WordCount"
+        attributes "Main-Class": "kit.pipeline.data.job.WordCount"
         attributes "Manifest-Version": version
     }
 

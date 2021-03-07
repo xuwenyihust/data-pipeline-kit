@@ -52,7 +52,11 @@ services:
 #      - JOB_MANAGER_RPC_ADDRESS=jobmanager
 #    container_name: flink_task_manager
 
+  # Data generator
+
   # Flink job
   flink-job:
-    build: ./flink/
+    build: ./flink-job/
+    depends_on:
+      - "kafka"
     container_name: flink_job

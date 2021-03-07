@@ -1,4 +1,4 @@
-package kit.pipeline.data.flink;
+package kit.pipeline.data.job;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
@@ -23,7 +23,7 @@ public class WordCount {
         // Kafka connection
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "kafka:9092");
-        properties.setProperty("group.id", "flink-service");
+        properties.setProperty("group.id", "flink-job");
 
         DataStream<String> stream = env
                 .addSource(new FlinkKafkaConsumer<>("topic", new SimpleStringSchema(), properties));
