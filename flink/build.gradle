@@ -31,6 +31,7 @@ dependencies {
 
     compile "org.apache.flink:flink-clients_$scalaBinaryVersion:$flinkVersion"
     compile "org.apache.flink:flink-streaming-java_$scalaBinaryVersion:$flinkVersion"
+    compile "org.apache.flink:flink-connector-kafka_$scalaBinaryVersion:$flinkVersion"
 }
 
 shadowJar {
