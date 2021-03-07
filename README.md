@@ -13,7 +13,7 @@
 
 ## Dependencies - 依赖
 * Java - 11
-* Gradle - 5.2.1
+* Gradle - 6.8.3
 
 ## Deployment - 部署
 ### Local - 单机

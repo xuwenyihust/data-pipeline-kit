@@ -1,0 +1,48 @@
+buildscript {
+    repositories {
+        jcenter() // this applies only to the Gradle 'Shadow' plugin
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.4'
+    }
+}
+
+plugins {
+    id 'java'
+    // For shadow jar generation
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+allprojects {
+    group = 'data-pipeline-kit'
+}
+
+//group 'kit.pipeline.data.job'
+//version '1.0-SNAPSHOT'
+//sourceCompatibility = 11
+
+ext {
+    junitVersion = '4.12'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'com.github.johnrengelman.shadow'
+
+    repositories {
+        mavenCentral()
+    }
+
+    ext {
+        flinkVersion = '1.12.0'
+        scalaBinaryVersion = '2.11'
+    }
+
+    dependencies {
+        testImplementation "junit:junit:$junitVersion"
+    }
+
+    shadowJar {
+        append 'reference.conf'
+    }
+}
