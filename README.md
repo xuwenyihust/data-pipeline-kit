@@ -6,7 +6,7 @@
 | Applications | Dashboard  |
 | OLAP Storage   | Druid     |
 | Computation   | Flink     |
-| Storage   | Kafka     |
+| Storage   | Kafka, HBase |
 | Data Collect   | Mock Data Generator  |
 
 ## Quick Start
