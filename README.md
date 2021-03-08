@@ -40,7 +40,7 @@
 | user_id | int |
 | product_id | int |
 | order_id | int  |
-| behavior_type | text (point / favorite / cart_add / cart_remove) |
+| behavior_type | text (point / favorite / cart_add / cart_remove / buy / cancel / pay) |
 | timestamp | time |
 
 #### Product - 商品
