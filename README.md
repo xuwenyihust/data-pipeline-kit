@@ -38,8 +38,9 @@
 | ----------- | ----------- |
 | id | int |
 | user_id | int |
+| order_id | int |
 | product_id | int |
-| order_id | int  |
+| product_count | int |
 | behavior_type | text (point / favorite / cart_add / cart_remove / buy / cancel / pay) |
 | timestamp | time |
 
