@@ -1,4 +1,4 @@
-# Data Pipeline Kit - 数仓平台实践
+# Data Pipeline Kit - 实时数仓平台实践
 
 ## Architecture - 架构
 | Layer      | Tools |
@@ -10,6 +10,10 @@
 | Data Collect   | Mock Data Generator  |
 
 ## Quick Start
+* Build project
+    * `./gradlew clean shadowJar`
+* Start docker containers
+    * `docker-compose up --build --force-recreate --remove-orphans`
 
 ## Dependencies - 依赖
 * Java - 11

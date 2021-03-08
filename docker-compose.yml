@@ -2,6 +2,8 @@ version: "2.2"
 services:
 
   # Kafka Cluster
+  # kafka-topics.sh --bootstrap-server localhost:9092 --list
+  # kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test
   kafka:
     image: wurstmeister/kafka
     ports:
