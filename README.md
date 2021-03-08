@@ -19,6 +19,21 @@
 * Java - 11
 * Gradle - 6.8.3
 
+## Data Schema 数据简介
+
+### Tables - 表结构
+
+#### Transaction - 交易
+
+#### Order - 订单
+| Column      | Description |
+| ----------- | ----------- |
+| order_id | int  |
+| user_id | int |
+
+### Events - 事件
+
+
 ## Deployment - 部署
 ### Local - 单机
 
