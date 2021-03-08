@@ -1,4 +1,6 @@
 rootProject.name = 'data-pipeline-kit'
 
+include 'shared'
 include "flink-job"
 include "data-generator"
+

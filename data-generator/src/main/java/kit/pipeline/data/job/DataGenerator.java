@@ -21,7 +21,7 @@ public class DataGenerator {
 
         while (true) {
             try (Producer<String, String> producer = new KafkaProducer<String, String>(props)) {
-                producer.send(new ProducerRecord<String, String>("test_in", "key", "wow"));
+                producer.send(new ProducerRecord<String, String>("behavior", "key", "wow"));
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 System.out.println("Got exception: " + e.getMessage());

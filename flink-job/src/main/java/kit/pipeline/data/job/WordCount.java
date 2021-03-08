@@ -26,7 +26,7 @@ public class WordCount {
         properties.setProperty("group.id", "flink-job");
 
         DataStream<String> stream = env
-                .addSource(new FlinkKafkaConsumer<>("test_in", new SimpleStringSchema(), properties));
+                .addSource(new FlinkKafkaConsumer<>("behavior", new SimpleStringSchema(), properties));
 
         SingleOutputStreamOperator<Tuple2<String, Integer>> counts = stream.flatMap(new LineSplitter()).keyBy(0).window(TumblingProcessingTimeWindows.of(Time.seconds(5))).sum(1);
         counts.print();
