@@ -66,7 +66,7 @@
 | creation_time | time |
 
 ### Events - 事件
-
+* User behavior event (`Behavior`) - 用户行为事件
 
 ## Deployment - 部署
 ### Local - 单机
