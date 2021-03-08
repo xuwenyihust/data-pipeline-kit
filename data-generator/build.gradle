@@ -4,6 +4,9 @@ ext {
 }
 
 dependencies {
+    // Internal dependencies
+    implementation project(':shared')
+    // External dependencies
     compile "org.apache.kafka:kafka_$scalaBinaryVersion:$kafkaClientVersion"
 }
 

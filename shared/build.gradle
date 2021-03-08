@@ -1,9 +1,10 @@
 ext {
     junitVersion = '4.12'
-    slf4jVersion = '1.7.30'
+    slf4jVersion = '2.14.0'
     lombokVersion = '1.18.12'
 }
 
 dependencies {
     compile "org.projectlombok:lombok:$lombokVersion"
+    compile "org.apache.logging.log4j:log4j-slf4j-impl:$slf4jVersion"
 }
