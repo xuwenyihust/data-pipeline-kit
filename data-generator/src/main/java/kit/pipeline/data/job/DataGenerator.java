@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
+import com.google.gson.Gson;
 
 import java.util.Properties;
 
@@ -14,6 +15,7 @@ public class DataGenerator {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(DataGenerator.class);
 
+        // Kafka connection setup
         Properties props = new Properties();
         props.put("bootstrap.servers", "kafka:9092");
         props.put("acks", "all");
@@ -24,11 +26,13 @@ public class DataGenerator {
         props.put("value.serializer",
                 "org.apache.kafka.common.serialization.StringSerializer");
 
+        Gson gson = new Gson();
         Behavior behaviorTest = new Behavior();
+        String behaviorTestString = gson.toJson(behaviorTest);
 
         while (true) {
             try (Producer<String, String> producer = new KafkaProducer<String, String>(props)) {
-                producer.send(new ProducerRecord<String, String>("behavior", "key", "wow"));
+                producer.send(new ProducerRecord<String, String>("behavior", "key", behaviorTestString));
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 logger.error("Got exception: {}", e.getMessage());

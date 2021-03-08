@@ -2,9 +2,11 @@ ext {
     junitVersion = '4.12'
     slf4jVersion = '2.14.0'
     lombokVersion = '1.18.12'
+    gsonVersion = '2.8.5'
 }
 
 dependencies {
     compile "org.projectlombok:lombok:$lombokVersion"
     compile "org.apache.logging.log4j:log4j-slf4j-impl:$slf4jVersion"
+    compile "com.google.code.gson:gson:$gsonVersion"
 }
