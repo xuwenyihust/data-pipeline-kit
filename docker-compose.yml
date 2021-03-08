@@ -53,6 +53,11 @@ services:
 #    container_name: flink_task_manager
 
   # Data generator
+  data-generator:
+    build: ./data-generator/
+    depends_on:
+      - "kafka"
+    container_name: data_generator
 
   # Flink job
   flink-job:
