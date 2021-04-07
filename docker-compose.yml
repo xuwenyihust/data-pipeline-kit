@@ -17,7 +17,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
-      - "zookeeper"
+      - zookeeper
     container_name: kafka
 
   # ZooKeeper Cluster
@@ -58,12 +58,12 @@ services:
   data-generator:
     build: ./data-generator/
     depends_on:
-      - "kafka"
+      - kafka
     container_name: data_generator
 
   # Flink job
   flink-job:
     build: ./flink-job/
     depends_on:
-      - "kafka"
+      - kafka
     container_name: flink_job
