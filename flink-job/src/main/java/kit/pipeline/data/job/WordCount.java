@@ -24,7 +24,7 @@ public class WordCount {
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers", "kafka:9092");
         properties.setProperty("group.id", "flink-job");
-
+        // Create data stream
         DataStream<String> stream = env
                 .addSource(new FlinkKafkaConsumer<>("behavior", new SimpleStringSchema(), properties));
 

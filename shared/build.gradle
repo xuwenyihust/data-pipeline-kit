@@ -7,6 +7,7 @@ ext {
 
 dependencies {
     compile "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
     compile "org.apache.logging.log4j:log4j-slf4j-impl:$slf4jVersion"
     compile "com.google.code.gson:gson:$gsonVersion"
 }

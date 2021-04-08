@@ -1,7 +1,6 @@
 package kit.pipeline.data.shared;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 
 @AllArgsConstructor
 public class Behavior {

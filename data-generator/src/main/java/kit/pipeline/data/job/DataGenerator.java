@@ -27,7 +27,7 @@ public class DataGenerator {
                 "org.apache.kafka.common.serialization.StringSerializer");
 
         Gson gson = new Gson();
-        Behavior behaviorTest = new Behavior();
+        Behavior behaviorTest = new Behavior(1,1,1,1,1,"22", "33");
         String behaviorTestString = gson.toJson(behaviorTest);
 
         while (true) {
